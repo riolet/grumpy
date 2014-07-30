@@ -1,7 +1,7 @@
 grumpy
 ======
 
-An MVC framework to make really snazzy nope.c web apps.
+An extension library for nope.c
 
 Acknowledgements:
 Yaroslav Stavnichiy for the nxjson library
