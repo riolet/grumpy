@@ -90,7 +90,7 @@ int gzw_puts (gzwRequest gzwr, const char *buf) {
 	if (gzwr.gzenabled) {
 		len=gzputs(gzwr.gzfile,buf);
 	} else {
-		len=fputs(gzwr.file,buf);
+		len=fputs(buf,gzwr.file);
 	}
 	return len;
 }
