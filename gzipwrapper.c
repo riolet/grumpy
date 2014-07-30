@@ -2,7 +2,9 @@
  * gzipwrapper.c
  *
  *  Created on: Jul 29, 2014
- *      Author: rohana
+ *      Author: Rohana Rezel
+ *
+ *      Requires: zlib
  */
 
 #include <zlib.h>
@@ -48,11 +50,6 @@ void gzw_sendHeadersType(gzwRequest gzwr,const char *type)
 	STATIC_SEND(client, "\r\n", 0);
 }
 
-/* This is like dprintf on post 2008 POSIX
- * You can use FDPRINTF which might use dprintf if it is available
- * Parameters: the client, format
- * Returns: the number of characters printed
- */
 long gzw_printf (gzwRequest gzwr, const char *format, ...)
 {
 	/* initial buffer large enough for most cases, will resize if required */
